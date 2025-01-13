@@ -1,0 +1,470 @@
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+} */
+
+/* Habit Tracker Container */
+/* .habit-tracker {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+/* Calendar Navigation */
+/* .calendar-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+} */
+
+/* .nav-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+/* .nav-button:hover {
+  background-color: #0056b3;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+ */
+/* Calendar Layout */
+/* .calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.calendar-day.empty {
+  background-color: transparent;
+}
+
+.calendar-day:hover {
+  background-color: #e0f7fa;
+}
+
+.calendar-day.completed {
+  background-color: #c8e6c9;
+}
+
+.day-number {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.task-left,
+.task-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.green-text {
+  color: green;
+} */
+
+/* Modal for Time Logging */
+/* .time-log-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.time-log-modal h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.time-log-modal label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.time-log-modal input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.save-button,
+.close-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.save-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+.close-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.close-button:hover {
+  background-color: #d32f2f;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #333;
+}
+
+/* Habit Tracker Container */
+.habit-tracker {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Adds a frosted glass effect */
+}
+
+/* Calendar Navigation */
+.calendar-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.nav-button {
+  background-color: #4caf50; /* Calming green for buttons */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #388e3c;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Calendar Layout */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(248, 248, 248, 0.9); /* Subtle background for days */
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.calendar-day.empty {
+  background-color: transparent;
+}
+
+.calendar-day:hover {
+  background-color: #d7f2f7;
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.calendar-day.completed {
+  background-color: #a5d6a7;
+}
+
+.day-number {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.task-left,
+.task-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.green-text {
+  color: green;
+}
+
+/* Modal for Time Logging */
+.time-log-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  display: none;
+}
+
+.time-log-modal h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.time-log-modal label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.time-log-modal input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.save-button,
+.close-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.save-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #388e3c;
+}
+
+.close-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.close-button:hover {
+  background-color: #d32f2f;
+}
+
+/* General Reset for Mobile-First Approach */
+body {
+  font-size: 16px; /* Base font size */
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 600px) {
+  .habit-tracker {
+    padding: 15px;
+    margin: 20px auto;
+    width: 95%;
+    box-shadow: none; /* Remove shadow for smaller devices */
+  }
+
+  .calendar {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+
+  .calendar-day {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .nav-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .time-log-modal {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .time-log-modal h3 {
+    font-size: 16px;
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .habit-tracker {
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .calendar {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+  }
+
+  .calendar-day {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .nav-button {
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+
+  .time-log-modal {
+    width: 80%;
+    padding: 18px;
+  }
+
+  .time-log-modal h3 {
+    font-size: 17px;
+  }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 1025px) {
+  .habit-tracker {
+    padding: 25px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .calendar {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+  }
+
+  .calendar-day {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .nav-button {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+
+  .time-log-modal {
+    width: 300px;
+    padding: 20px;
+  }
+
+  .time-log-modal h3 {
+    font-size: 18px;
+  }
+}
+
+/* Extra-Large Devices (4K and Ultra-Wide Screens) */
+@media (min-width: 1440px) {
+  .habit-tracker {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+  }
+
+  .calendar-day {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .nav-button {
+    padding: 14px 20px;
+    font-size: 18px;
+  }
+
+  .time-log-modal {
+    width: 350px;
+    padding: 25px;
+  }
+
+  .time-log-modal h3 {
+    font-size: 20px;
+  }
+}

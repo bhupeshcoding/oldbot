@@ -1,0 +1,8 @@
+[
+  "Hi, my name is {name}, and you can reach me at {phone}. Here’s a little message I’d like to share: {message}",
+  "Hey there! I’m {name}, you can call me at {phone}. I wanted to say: {message}",
+  "Hello, I’m {name} (phone: {phone}), and here’s a message I’ve been meaning to share: {message}",
+  "Hi, my name is {name}. Feel free to contact me at {phone}. My message for you is: {message}",
+  "Greetings! I’m {name}, and you can get in touch with me at {phone}. I’d like to say: {message}",
+  "Hey! I’m {name} — you can contact me at {phone}. Here’s my message for you: {message}"
+]
