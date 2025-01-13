@@ -1,0 +1,1 @@
+import{j as o,L as s}from"./index-CN_yDdzf.js";const n=()=>o.jsxs("div",{className:"not-found-container",children:[o.jsx("h1",{className:"not-found-title",children:"404"}),o.jsx("p",{className:"not-found-message",children:"Oops! The page you're looking for does not exist."}),o.jsx(s,{to:"/",className:"not-found-link",children:"Go Back to Home"})]});export{n as default};
