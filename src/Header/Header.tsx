@@ -111,14 +111,23 @@ const Header: React.FC = () => {
           </li>
           <li>
             <a
-              href="https://github.com"
+              href="https://github.com/bhupeshcoding"
               target="_blank"
               rel="noopener noreferrer"
             >
               GitHub
             </a>
           </li>
-          {/* Replace href with Link for routing */}
+         
+          <li>
+            <a
+              href="https://snapchat-smoky.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Oldbot
+            </a>
+          </li>
           <li>
             <Link to="/contact">Contact</Link> {/* Correct Link for routing */}
           </li>
